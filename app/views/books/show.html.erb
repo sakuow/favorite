@@ -1,6 +1,6 @@
 <div class="container px-5 px-sm-0">
   <div class="row">
-<%= render 'users/list', user: @user, book: @book %>
+<%= render 'users/list', user: @user, book: @new_book %>
 <div class="col-md-8 offset-md-1">
   <h2>Book detail</h2>
   <table class="table">
@@ -13,7 +13,7 @@
           <% end %>
         </td>
         <td>
-          <%= link_to book_path(@user) do %>
+          <%= link_to book_path(@book.id) do %>
             <%= @book.title %>
           <% end %>
         </td>
